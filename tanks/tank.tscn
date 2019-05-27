@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://tank.gd" type="Script" id=1]
+[ext_resource path="res://tanks.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 64.3179, 32.7383 )
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+script = ExtResource( 1 )
+speed = 100
+rotation_speed = 1.5
+
+[node name="Sprite" type="Sprite" parent="."]
+
+[node name="tanks" type="Sprite" parent="Sprite"]
+position = Vector2( -1.06628, 0.756653 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.83625, 0 )
+shape = SubResource( 1 )

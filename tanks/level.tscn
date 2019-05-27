@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://ground.png" type="Texture" id=1]
+[ext_resource path="res://tank.tscn" type="PackedScene" id=2]
+[ext_resource path="res://StaticTank.tscn" type="PackedScene" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 1.0
+margin_right = 1025.0
+margin_bottom = 599.0
+texture = ExtResource( 1 )
+stretch_mode = 2
+
+[node name="KinematicBody2D" parent="TextureRect" instance=ExtResource( 2 )]
+position = Vector2( 231.98, 189.02 )
+
+[node name="StaticBody2D" parent="TextureRect" instance=ExtResource( 3 )]
+position = Vector2( 708.827, 323.626 )
