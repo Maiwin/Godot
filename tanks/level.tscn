@@ -14,7 +14,7 @@ texture = ExtResource( 1 )
 stretch_mode = 2
 
 [node name="KinematicBody2D" parent="TextureRect" instance=ExtResource( 2 )]
-position = Vector2( 231.98, 189.02 )
+position = Vector2( 232.98, 191.02 )
 
 [node name="StaticBody2D" parent="TextureRect" instance=ExtResource( 3 )]
 position = Vector2( 708.827, 323.626 )
