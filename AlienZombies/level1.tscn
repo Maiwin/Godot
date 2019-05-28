@@ -1,12 +1,262 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Box.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Box.tscn" type="PackedScene" id=1]
+[ext_resource path="res://TileMap.tres" type="TileSet" id=2]
+[ext_resource path="res://Objects/Tree.png" type="Texture" id=3]
+[ext_resource path="res://Objects/TombStone (2).png" type="Texture" id=4]
+[ext_resource path="res://Objects/Sign.png" type="Texture" id=5]
+[ext_resource path="res://Objects/Bush (2).png" type="Texture" id=6]
+[ext_resource path="res://Objects/DeadBush.png" type="Texture" id=7]
+[ext_resource path="res://Objects/Skeleton.png" type="Texture" id=8]
+[ext_resource path="res://Objects/ArrowSign.png" type="Texture" id=9]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=10]
+[ext_resource path="res://BG Layers/bg1.png" type="Texture" id=11]
+[ext_resource path="res://BG Layers/bg2.png" type="Texture" id=12]
+[ext_resource path="res://BG Layers/bg3.png" type="Texture" id=13]
 
 [node name="level1" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 233.079, 263.626 )
+[node name="Box" parent="." instance=ExtResource( 1 )]
+position = Vector2( 232.887, 590.985 )
 
-[node name="Box" parent="." instance=ExtResource( 2 )]
-position = Vector2( 243.679, 568.792 )
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 128, 128 )
+format = 1
+tile_data = PoolIntArray( 36, 3, 0, 65536, 2, 0, 65572, 3, 0, 131072, 5, 0, 131100, 13, 0, 131101, 15, 0, 131108, 3, 0, 196608, 5, 0, 196632, 13, 0, 196633, 14, 0, 196634, 14, 0, 196635, 15, 0, 196638, 13, 0, 196639, 15, 0, 196644, 3, 0, 262144, 5, 0, 262153, 0, 0, 262154, 1, 0, 262155, 1, 0, 262156, 2, 0, 262163, 13, 0, 262164, 14, 0, 262165, 14, 0, 262166, 14, 0, 262167, 15, 0, 262176, 13, 0, 262177, 15, 0, 262180, 3, 0, 327680, 9, 0, 327681, 1, 0, 327682, 1, 0, 327683, 1, 0, 327684, 1, 0, 327685, 1, 0, 327686, 1, 0, 327687, 1, 0, 327688, 1, 0, 327689, 7, 0, 327690, 4, 0, 327691, 4, 0, 327692, 9, 0, 327693, 1, 0, 327694, 1, 0, 327695, 1, 0, 327696, 1, 0, 327697, 1, 0, 327698, 2, 0, 327714, 10, 0, 327715, 1, 0, 327716, 7, 0 )
+
+[node name="Objects" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="tree" type="Sprite" parent="Objects"]
+position = Vector2( 621.859, 523.31 )
+texture = ExtResource( 3 )
+
+[node name="tree2" type="Sprite" parent="Objects"]
+position = Vector2( 1540.58, 415.535 )
+scale = Vector2( 0.826076, 0.817101 )
+texture = ExtResource( 3 )
+
+[node name="tree3" type="Sprite" parent="Objects"]
+position = Vector2( 2124.68, 545.417 )
+scale = Vector2( 0.894591, 0.842328 )
+texture = ExtResource( 3 )
+
+[node name="tree4" type="Sprite" parent="Objects"]
+position = Vector2( 3312.46, 284.397 )
+scale = Vector2( 0.894591, 0.842328 )
+texture = ExtResource( 3 )
+
+[node name="tree5" type="Sprite" parent="Objects"]
+position = Vector2( 3704.62, 159.728 )
+scale = Vector2( 0.894591, 0.842328 )
+texture = ExtResource( 3 )
+
+[node name="tree6" type="Sprite" parent="Objects"]
+position = Vector2( 4520.83, 544.712 )
+scale = Vector2( 0.894591, 0.842328 )
+texture = ExtResource( 3 )
+
+[node name="TombStone" type="Sprite" parent="Objects"]
+position = Vector2( 1479.37, 479.964 )
+scale = Vector2( 0.894591, 0.842328 )
+texture = ExtResource( 4 )
+
+[node name="TombStone3" type="Sprite" parent="Objects"]
+position = Vector2( 3971.76, 339.886 )
+scale = Vector2( 1.0567, 1.16264 )
+texture = ExtResource( 4 )
+
+[node name="Sing" type="Sprite" parent="Objects"]
+position = Vector2( 4481.43, 609.709 )
+scale = Vector2( 0.872059, 0.842328 )
+texture = ExtResource( 5 )
+
+[node name="Sing2" type="Sprite" parent="Objects"]
+position = Vector2( 3468.66, 345.803 )
+scale = Vector2( 0.894591, 0.842328 )
+texture = ExtResource( 5 )
+
+[node name="Sing3" type="Sprite" parent="Objects"]
+position = Vector2( 1957.41, 598.021 )
+scale = Vector2( 0.894591, 0.842328 )
+texture = ExtResource( 5 )
+
+[node name="Bush" type="Sprite" parent="Objects"]
+position = Vector2( 792.699, 624.678 )
+scale = Vector2( 0.894591, 0.842328 )
+texture = ExtResource( 6 )
+
+[node name="Bush2" type="Sprite" parent="Objects"]
+position = Vector2( 866.937, 625.786 )
+scale = Vector2( 0.894591, 0.842328 )
+texture = ExtResource( 6 )
+
+[node name="Bush3" type="Sprite" parent="Objects"]
+position = Vector2( 940.067, 618.03 )
+scale = Vector2( 0.894591, 0.842328 )
+texture = ExtResource( 6 )
+
+[node name="Bush4" type="Sprite" parent="Objects"]
+position = Vector2( 599.901, 624.678 )
+scale = Vector2( 0.894591, 0.842328 )
+texture = ExtResource( 6 )
+
+[node name="Bush5" type="Sprite" parent="Objects"]
+position = Vector2( 1315.69, 492.822 )
+scale = Vector2( 0.894591, 0.842328 )
+texture = ExtResource( 6 )
+
+[node name="Bush6" type="Sprite" parent="Objects"]
+position = Vector2( 1356.69, 476.201 )
+scale = Vector2( 0.894591, 0.842328 )
+texture = ExtResource( 6 )
+
+[node name="Bush7" type="Sprite" parent="Objects"]
+position = Vector2( 1372.2, 492.822 )
+scale = Vector2( 0.894591, 0.842328 )
+texture = ExtResource( 6 )
+
+[node name="Bush8" type="Sprite" parent="Objects"]
+position = Vector2( 1261.4, 493.93 )
+scale = Vector2( 0.894591, 0.842328 )
+texture = ExtResource( 6 )
+
+[node name="Bush9" type="Sprite" parent="Objects"]
+position = Vector2( 1859.73, 614.705 )
+scale = Vector2( 0.894591, 0.842328 )
+texture = ExtResource( 6 )
+
+[node name="Bush10" type="Sprite" parent="Objects"]
+position = Vector2( 2006.68, 614.432 )
+scale = Vector2( 0.894591, 0.842328 )
+texture = ExtResource( 6 )
+
+[node name="Bush13" type="Sprite" parent="Objects"]
+position = Vector2( 2053.21, 612.216 )
+scale = Vector2( 0.894591, 0.842328 )
+texture = ExtResource( 6 )
+
+[node name="Bush11" type="Sprite" parent="Objects"]
+position = Vector2( 2251.16, 616.006 )
+scale = Vector2( 1.10511, 0.998146 )
+texture = ExtResource( 6 )
+
+[node name="Bush12" type="Sprite" parent="Objects"]
+position = Vector2( 2566.4, 489.136 )
+scale = Vector2( 0.938912, 0.842328 )
+texture = ExtResource( 6 )
+
+[node name="Bush15" type="Sprite" parent="Objects"]
+position = Vector2( 3176, 361.712 )
+scale = Vector2( 0.938912, 0.842328 )
+texture = ExtResource( 6 )
+
+[node name="Bush16" type="Sprite" parent="Objects"]
+position = Vector2( 3935.43, 360.888 )
+scale = Vector2( 0.938912, 0.842328 )
+texture = ExtResource( 6 )
+
+[node name="Bush17" type="Sprite" parent="Objects"]
+position = Vector2( 3763.68, 232.835 )
+scale = Vector2( 0.938912, 0.842328 )
+texture = ExtResource( 6 )
+
+[node name="Bush18" type="Sprite" parent="Objects"]
+position = Vector2( 4555.61, 625.578 )
+scale = Vector2( 0.938912, 0.842328 )
+texture = ExtResource( 6 )
+
+[node name="Bush19" type="Sprite" parent="Objects"]
+position = Vector2( 4268.02, 490.283 )
+scale = Vector2( 0.938912, 0.842328 )
+texture = ExtResource( 6 )
+
+[node name="Bush20" type="Sprite" parent="Objects"]
+position = Vector2( 4445.35, 626.919 )
+scale = Vector2( 0.738435, 0.640958 )
+texture = ExtResource( 6 )
+
+[node name="Bush14" type="Sprite" parent="Objects"]
+position = Vector2( 2297.7, 624.316 )
+scale = Vector2( 0.750547, 0.634572 )
+texture = ExtResource( 6 )
+
+[node name="DeadBush" type="Sprite" parent="Objects"]
+position = Vector2( 1753.55, 645.796 )
+scale = Vector2( 0.750547, 0.634572 )
+texture = ExtResource( 7 )
+
+[node name="DeadBush2" type="Sprite" parent="Objects"]
+position = Vector2( 1613.22, 489.711 )
+scale = Vector2( 0.750547, 0.634572 )
+texture = ExtResource( 7 )
+
+[node name="DeadBush3" type="Sprite" parent="Objects"]
+position = Vector2( 308.69, 618.588 )
+scale = Vector2( 0.750547, 0.634572 )
+texture = ExtResource( 7 )
+
+[node name="DeadBush4" type="Sprite" parent="Objects"]
+position = Vector2( 4224.57, 493.915 )
+scale = Vector2( 0.750547, 0.634572 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton" type="Sprite" parent="Objects"]
+position = Vector2( 4561.49, 642.737 )
+scale = Vector2( 0.497846, 0.405456 )
+texture = ExtResource( 8 )
+
+[node name="Skeleton2" type="Sprite" parent="Objects"]
+position = Vector2( 4028.74, 380.365 )
+scale = Vector2( 0.427646, 0.405457 )
+texture = ExtResource( 8 )
+
+[node name="Skeleton3" type="Sprite" parent="Objects"]
+position = Vector2( 2213.21, 632.192 )
+scale = Vector2( 0.582078, 0.491376 )
+texture = ExtResource( 8 )
+
+[node name="ArrowSing" type="Sprite" parent="Objects"]
+position = Vector2( 490.549, 620.736 )
+scale = Vector2( 0.582078, 0.491376 )
+texture = ExtResource( 9 )
+
+[node name="ArrowSing2" type="Sprite" parent="Objects"]
+position = Vector2( 2736.6, 488.995 )
+scale = Vector2( 0.565416, 0.524296 )
+texture = ExtResource( 9 )
+
+[node name="Player" parent="." instance=ExtResource( 10 )]
+position = Vector2( 250.764, 330.284 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0, 0 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 986.911, 240.977 )
+texture = ExtResource( 11 )
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.26, 0.26 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_mirroring = Vector2( 2000, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 967.538, 202.781 )
+scale = Vector2( 0.962482, 0.962336 )
+texture = ExtResource( 12 )
+
+[node name="ParallaxBackground3" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.5, 0.5 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground3"]
+motion_mirroring = Vector2( 2000, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground3/ParallaxLayer"]
+position = Vector2( 988.553, 197.693 )
+scale = Vector2( 0.988289, 1 )
+texture = ExtResource( 13 )

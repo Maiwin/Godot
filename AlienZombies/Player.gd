@@ -3,7 +3,7 @@ extends KinematicBody2D
 const SPEED = 200 
 const FLOOR = Vector2(0, -1)  #указывает где находиться земля	 
 const GRAVITY = 970			  #ускорение для гравитаций 
-const JUMP_POWER = 500 		  #как сильно будет прыгать персонаж 
+const JUMP_POWER = 550 		  #как сильно будет прыгать персонаж 
 
 var velocity = Vector2()
 
