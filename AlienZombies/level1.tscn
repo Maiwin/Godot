@@ -9,28 +9,4 @@
 position = Vector2( 233.079, 263.626 )
 
 [node name="Box" parent="." instance=ExtResource( 2 )]
-position = Vector2( 296.734, 568.792 )
-
-[node name="Box" parent="Box" instance=ExtResource( 2 )]
-position = Vector2( -115.963, 47.2972 )
-
-[node name="Box2" parent="Box" instance=ExtResource( 2 )]
-position = Vector2( -220.712, 48.6575 )
-
-[node name="Box2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 451.485, 500.457 )
-
-[node name="Box3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 594.324, 413.393 )
-
-[node name="Box4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 733.082, 316.806 )
-
-[node name="Box5" parent="." instance=ExtResource( 2 )]
-position = Vector2( 855.516, 228.382 )
-
-[node name="Box6" parent="." instance=ExtResource( 2 )]
-position = Vector2( 960.265, 228.382 )
-
-[node name="Box7" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1065.01, 228.382 )
+position = Vector2( 243.679, 568.792 )

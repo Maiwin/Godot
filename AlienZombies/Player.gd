@@ -15,17 +15,24 @@ func _physics_process(delta):
 	#Движения вправо и налево
 	if Input.is_action_pressed("ui_right"): 
 		velocity.x = SPEED
-		$Sprite.flip_h = false
+		$AnimatedSprite.flip_h = false
+		if is_on_floor():
+			$AnimatedSprite.play("walk")
 	elif Input.is_action_pressed("ui_left"):
 		velocity.x = -SPEED 
-		$Sprite.flip_h = true
+		$AnimatedSprite.flip_h = true
+		if is_on_floor():
+			$AnimatedSprite.play("walk")
 	#обнулили скорость когда клавиша не нажата 
 	else: 
 		velocity.x = 0
+		if is_on_floor():
+			$AnimatedSprite.play("idle")
 		
 	#прыжок 
 	if Input.is_action_pressed("ui_up") && is_on_floor():
 		velocity.y = -JUMP_POWER
+		$AnimatedSprite.play("jump")
 		
 	velocity.y += (GRAVITY * delta)
 	velocity = move_and_slide(velocity, FLOOR)
